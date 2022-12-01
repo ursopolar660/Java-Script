@@ -8,13 +8,30 @@
 </head>
 <body>
     <script>
-   /*Desenvolva um algoritmo que leia 10 números, calcule e escreva a
+    /*Desenvolva um algoritmo que leia 10 números, calcule e escreva a
 média aritmética dos valores lidos, a quantidade de valores
 
 positivos, a quantidade de valores negativos e o percentual de
 valores negativos e positivos.*/
+    let soma = 0
+    let positivo = 0
+    let negativo = 0
+    let qtdNumeros = 0
+    for (let i = 1; i <= 10; i++) {    
+        let numeros = parseFloat(prompt(`Digite o ${i}º número`))
+        soma = soma + numeros
+        qtdNumeros++
+        if (numeros <0){
+            negativo = negativo + 1
+        }else{
+            positivo += 1
         }
     }
+    let media = soma / qtdNumeros;
+    let porcNegativo = negativo / qtdNumeros * 100;
+    let porcPositivo = positivo / qtdNumeros * 100;
+    alert("A média aritmetica é " + media+".\nO número de negativos foi de: " + negativo +".\nO número de positivos foi de: " + positivo+
+    ".\nA porcentagem de negativos é " + porcNegativo+".\nA porcentagem de positivo é " + porcPositivo)
     </script>
 </body>
 </html>
