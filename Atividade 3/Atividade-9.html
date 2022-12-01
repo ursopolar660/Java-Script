@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício - 9</title>
+</head>
+<body>
+    <script>
+        /*Desenvolva um algoritmo que leia a altura de 15 pessoas. Este
+programa deverá calcular e mostrar:
+a. A menor altura do grupo;
+b. A maior altura do grupo;*/
+        const pes = 15
+        let maior = 0
+        let menor = 0
+        for (let p = 1; p < pes; p++) {
+            let altura = parseFloat(prompt(`A altura da ${p}ª pessoa:`))
+            if(p === 1){
+                maior = altura
+                menor = altura
+            }else{
+                if(altura > maior){
+                    maior = altura
+                }
+                if(altura < menor){
+                    menor = altura
+                }
+            }
+        }
+        alert(`A maior altura foi ${maior} metros.\nA menor altura foi ${menor} metros.`)
+    </script>
+</body>
+</html>

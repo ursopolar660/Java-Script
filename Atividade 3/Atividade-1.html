@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício - 1</title>
+</head>
+<body>
+    <script>
+        let alt = parseFloat(prompt('Digite sua altura:'))
+        let peso = parseFloat(prompt('Digite seu peso:'))
+        let res = peso/(alt**2)
+
+        if(res <18.5){
+            alert('Você está abaixo da faixa de peso ideal')
+        }else if(res > 24.99){
+            alert('Você está acima da faixa de peso ideal')
+        }else if(res <=24.99 && res >= 18.5){
+            alert('Você está dentro da faixa de peso ideal.')
+        }
+    </script>
+</body>
+</html>
