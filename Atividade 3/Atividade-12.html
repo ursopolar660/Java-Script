@@ -4,27 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercício - 11</title>
+    <title>Exercício - 12</title>
 </head>
 <body>
     <script>
-    let n1 = 30
-    let n2 = 1
-    for (let i= n1; i >= n2; i--) {
-        let div = 0
-        for(let a = 2; a < i ; a++){
-            if (i%a==0){
-                div=1;
-                break;
-            }
-        }
-        if (i > 1 && div == 0) {
-        document.write('['+ i +']..');
-        }
-        else{
-            document.write(i +'..')
+    /*Desenvolva um algoritmo que leia 10 números, calcule e escreva a
+média aritmética dos valores lidos, a quantidade de valores
+
+positivos, a quantidade de valores negativos e o percentual de
+valores negativos e positivos.*/
+    let soma = 0
+    let positivo = 0
+    let negativo = 0
+    let qtdNumeros = 0
+    for (let i = 1; i <= 10; i++) {    
+        let numeros = parseFloat(prompt(`Digite o ${i}º número`))
+        soma = soma + numeros
+        qtdNumeros++
+        if (numeros <0){
+            negativo = negativo + 1
+        }else{
+            positivo += 1
         }
     }
+    let media = soma / qtdNumeros;
+    let porcNegativo = negativo / qtdNumeros * 100;
+    let porcPositivo = positivo / qtdNumeros * 100;
+    alert("A média aritmetica é " + media+".\nO número de negativos foi de: " + negativo +".\nO número de positivos foi de: " + positivo+
+    ".\nA porcentagem de negativos é " + porcNegativo+".\nA porcentagem de positivo é " + porcPositivo)
     </script>
 </body>
 </html>
